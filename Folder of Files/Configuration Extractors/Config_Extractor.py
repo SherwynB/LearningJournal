@@ -61,9 +61,9 @@ def main():
 
   # Display results based on whether the sequence was found
   if sequence_found:
-    print(f"The byte sequence 0x90 0x90 0xcc is found in the {found_section} section at memory address 0x{found_address:x}.")
+    print(f"The byte sequence is found in the {found_section} section at memory address 0x{found_address:x}.")
   else:
-    print("The byte sequence 0x90 0x90 0xcc is not found in either section.")
+    print("The byte sequence is not found in any section.")
 
 if __name__ == "__main__":
   # This block ensures the main function only runs when the script is executed directly
