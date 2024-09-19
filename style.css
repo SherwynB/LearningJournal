@@ -15,6 +15,10 @@ h1 {
   text-align: center;
 }
 
+.subtitle {
+  font-size: 12px; 
+}
+
 table {
   border-collapse: collapse;
   width: 80%;
