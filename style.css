@@ -1,8 +1,8 @@
 body {
-  background-color: #111; /* Dark black background */
+  background-color: #111;
   font-family: sans-serif;
   margin: 2rem;
-  color: #f5a900; /* Orange text */
+  color: #f5a900; 
 }
 
 h1 {
@@ -28,7 +28,7 @@ table {
 th, td {
   padding: 16px;
   text-align: center;
-  border-right: 1px solid #333; /* Darker grey border */
+  border-right: 1px solid #333;
   vertical-align: top;
 }
 
@@ -38,16 +38,14 @@ td:last-child {
 }
 
 th {
-  background-color: #222; /* Darker grey header background */
-  font-weight: bold;
+  background-color: #222; 
 }
 
-/* Ensure the `a` rule is specific and comes after any potential conflicting rules */
 a:link, a:visited {
-  color: #f5a900; /* Orange links */
+  color: #f5a900;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ff9900; /* Lighter orange on hover */
+  color: #ff9900; 
 }
