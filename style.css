@@ -2,7 +2,7 @@ body {
   background-color: #111;
   font-family: sans-serif;
   margin: 2rem;
-  color: #f5a900; 
+  color: #f5a900;
 }
 
 h1 {
@@ -16,7 +16,7 @@ h1 {
 }
 
 .subtitle {
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 table {
@@ -38,7 +38,7 @@ td:last-child {
 }
 
 th {
-  background-color: #222; 
+  background-color: #222;
 }
 
 a:link, a:visited {
@@ -47,5 +47,25 @@ a:link, a:visited {
 }
 
 a:hover {
-  color: #ff9900; 
+  color: #ff9900;
+}
+
+.second-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #45a049;
 }
