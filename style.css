@@ -61,7 +61,7 @@ a:hover {
 
 .button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #222;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -73,5 +73,5 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #45a049;
+  background-color: #333;
 }
