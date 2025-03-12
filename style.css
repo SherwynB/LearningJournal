@@ -21,8 +21,8 @@ h1 {
 
 table {
   border-collapse: collapse;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 20px auto;
 }
 
 th, td {
@@ -30,6 +30,7 @@ th, td {
   text-align: center;
   border-right: 1px solid #333;
   vertical-align: top;
+  width: 16.66%;
 }
 
 th:last-child,
