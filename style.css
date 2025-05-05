@@ -42,6 +42,17 @@ th {
   background-color: #222;
 }
 
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #222;
+  z-index: 2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
 a:link, a:visited {
   color: #f5a900;
   text-decoration: none;
