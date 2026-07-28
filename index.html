@@ -2,247 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sherwyn B.'s learning journal: malware analysis, development experiments, phishing research, extractors, YARA rules, and security tools.">
-  <meta name="theme-color" content="#0b0d0c">
-  <title>Sherwyn B. — Malware Research Journal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sherwyn B.'s malware analysis and security tooling portfolio.">
+  <meta name="theme-color" content="#101114">
+  <title>Sherwyn B.</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="index.html" aria-label="Sherwyn B. learning journal home">
-        <span class="brand-mark" aria-hidden="true">SB</span>
-        <span>
-          <strong>Sherwyn B.</strong>
-          <small>Learning journal</small>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="active" href="index.html" aria-current="page">Research</a>
-        <a href="page2.html">Archive</a>
-        <a href="page3.html">Queue</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sherwyn B. home">Sherwyn B.</a>
+      <nav aria-label="Primary navigation">
+        <a class="active" href="index.html" aria-current="page">Portfolio</a>
+        <a href="page2.html">Projects</a>
+        <a href="page3.html">About</a>
       </nav>
-      <a class="header-link" href="https://github.com/SherwynB" target="_blank" rel="noreferrer">
-        GitHub <span aria-hidden="true">↗</span>
-      </a>
+      <a class="github-link" href="https://github.com/SherwynB" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="shell hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Cybersecurity research portfolio // 2026</p>
-        <h1>I pull malicious code apart to understand <em>how it works.</em></h1>
-        <p class="hero-intro">
-          A working journal of malware reversing, development experiments, phishing analysis,
-          detection logic, and the small tools I build along the way.
+    <section class="container portfolio-intro">
+      <div class="portfolio-intro-main">
+        <h1>Malware analysis and security tooling.</h1>
+        <p class="portfolio-summary">
+          Analysis notes, development exercises, YARA rules, configuration extractors,
+          and tools for security investigations.
         </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#research">Explore the research <span aria-hidden="true">↓</span></a>
-          <a class="button button-secondary" href="page2.html">Open the archive</a>
+        <div class="portfolio-links">
+          <a href="page2.html">View all projects</a>
+          <a href="https://github.com/SherwynB" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
-      </div>
-
-      <aside class="focus-panel" aria-label="Current areas of focus">
-        <div class="panel-topline">
-          <span>Current focus</span>
-          <span class="live-label">Actively learning</span>
-        </div>
-        <ol class="focus-list">
-          <li><span>01</span><strong>Malware internals</strong><small>Unpacking, tracing, documenting</small></li>
-          <li><span>02</span><strong>Payload behavior</strong><small>Injection, obfuscation, execution</small></li>
-          <li><span>03</span><strong>Detection craft</strong><small>YARA, extractors, analysis tools</small></li>
-        </ol>
-        <p class="terminal-line"><span aria-hidden="true">$</span> curiosity --continuous<span class="cursor" aria-hidden="true"></span></p>
-      </aside>
-    </section>
-
-    <section class="shell metrics" aria-label="Journal summary">
-      <div><strong>53</strong><span>Published lab entries</span></div>
-      <div><strong>06</strong><span>Research disciplines</span></div>
-      <div><strong>∞</strong><span>Questions left to chase</span></div>
-    </section>
-
-    <section class="shell research-section" id="research">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Selected work / full index</p>
-          <h2>Research, tools, and experiments</h2>
-        </div>
-        <p>Every entry links to the original notes, code, or detection artifact on GitHub.</p>
-      </div>
-
-      <div class="filter-bar" aria-label="Filter research">
-        <label class="search-box" for="project-search">
-          <span aria-hidden="true">⌕</span>
-          <span class="sr-only">Search research</span>
-          <input id="project-search" type="search" placeholder="Search 49 entries…" autocomplete="off">
-        </label>
-        <div class="filter-buttons" role="group" aria-label="Filter by discipline">
-          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-button" type="button" data-filter="analysis" aria-pressed="false">Analysis</button>
-          <button class="filter-button" type="button" data-filter="development" aria-pressed="false">Development</button>
-          <button class="filter-button" type="button" data-filter="phishing" aria-pressed="false">Phishing</button>
-          <button class="filter-button" type="button" data-filter="detection" aria-pressed="false">Detection</button>
-          <button class="filter-button" type="button" data-filter="tools" aria-pressed="false">Tools</button>
-        </div>
-      </div>
-
-      <p class="result-count" aria-live="polite"><span id="visible-count">49</span> entries in view</p>
-
-      <div class="work-grid">
-        <article class="work-card" data-category="analysis">
-          <header>
-            <div>
-              <span class="card-index">01 / RE</span>
-              <h3>Malware analysis</h3>
-            </div>
-            <span class="card-count">12 notes</span>
-          </header>
-          <p class="card-description">Behavioral notes, unpacking walkthroughs, and family deep dives.</p>
-          <ul class="project-list">
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/Hancitor%201.pdf" target="_blank" rel="noreferrer"><span>Hancitor</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/DBATLoader.pdf" target="_blank" rel="noreferrer"><span>DBATLoader</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/AsyncRAT.pdf" target="_blank" rel="noreferrer"><span>AsyncRAT</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/BuerLoader.pdf" target="_blank" rel="noreferrer"><span>BuerLoader</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/Snake%20Keylogger.pdf" target="_blank" rel="noreferrer"><span>Snake Keylogger</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/Emotet.pdf" target="_blank" rel="noreferrer"><span>Emotet</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/VJW0rm.pdf" target="_blank" rel="noreferrer"><span>VJW0rm</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/tgToxic.pdf" target="_blank" rel="noreferrer"><span>tgToxic</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/PrincessLocker%201%20Unpacking.pdf" target="_blank" rel="noreferrer"><span>PrincessLocker</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/LummaC%2CRhadamanthys%20WIP.pdf" target="_blank" rel="noreferrer"><span>LummaC + Rhadamanthys</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/Maldoc.pdf" target="_blank" rel="noreferrer"><span>Malicious document</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/DarkCloud.pdf" target="_blank" rel="noreferrer"><span>DarkCloud</span><span aria-hidden="true">↗</span></a></li>
-          </ul>
-        </article>
-
-        <article class="work-card" data-category="development">
-          <header>
-            <div>
-              <span class="card-index">02 / DEV</span>
-              <h3>Malware development</h3>
-            </div>
-            <span class="card-count">12 labs</span>
-          </header>
-          <p class="card-description">Controlled experiments for understanding offensive tradecraft from the inside.</p>
-          <ul class="project-list">
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/Real%20Malware" target="_blank" rel="noreferrer"><span>Real malware study</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/rsrc_embed" target="_blank" rel="noreferrer"><span>.rsrc embedding</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/simpleBase64" target="_blank" rel="noreferrer"><span>Base64-encoded payload</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/DLL_Injection" target="_blank" rel="noreferrer"><span>DLL injection</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/AES" target="_blank" rel="noreferrer"><span>AES</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/CodeCaveTrojan" target="_blank" rel="noreferrer"><span>Code cave trojans</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/functionObfuscation" target="_blank" rel="noreferrer"><span>Function obfuscation</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/ProcessInjection" target="_blank" rel="noreferrer"><span>Process injection</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/Pranktest.html" target="_blank" rel="noreferrer"><span>Prankware test</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/ShellcodeRunnerTemplate" target="_blank" rel="noreferrer"><span>Shellcode template</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/XOR" target="_blank" rel="noreferrer"><span>XOR</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/Simple%20Shellcode" target="_blank" rel="noreferrer"><span>Simple shellcode</span><span aria-hidden="true">↗</span></a></li>
-          </ul>
-        </article>
-
-        <article class="work-card" data-category="phishing">
-          <header>
-            <div>
-              <span class="card-index">03 / PHISH</span>
-              <h3>Phishing analysis</h3>
-            </div>
-            <span class="card-count">05 notes</span>
-          </header>
-          <p class="card-description">Delivery chains, evasive techniques, and credential theft infrastructure.</p>
-          <ul class="project-list">
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/Phish%20onEvent%20Evasion.pdf" target="_blank" rel="noreferrer"><span>OnEvent evasion</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/Dropbox%20Phishers.pdf" target="_blank" rel="noreferrer"><span>Dropbox phishers</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/Agent%20Tesla%20Phish.pdf" target="_blank" rel="noreferrer"><span>Agent Tesla phish</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/Decoding%20Tycoon2FA.pdf" target="_blank" rel="noreferrer"><span>Tycoon2FA</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/FileFix.pdf" target="_blank" rel="noreferrer"><span>FileFix</span><span aria-hidden="true">↗</span></a></li>
-          </ul>
-        </article>
-
-        <article class="work-card" data-category="detection">
-          <header>
-            <div>
-              <span class="card-index">04 / EXT</span>
-              <h3>Config extractors</h3>
-            </div>
-            <span class="card-count">05 builds</span>
-          </header>
-          <p class="card-description">Purpose-built parsers and decryptors that turn samples into usable intelligence.</p>
-          <ul class="project-list">
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/Configuration%20Extractors/Config_Extractor.py" target="_blank" rel="noreferrer"><span>My first extractor</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/Configuration%20Extractors/b64Extractor.py" target="_blank" rel="noreferrer"><span>Base64 extractor</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/Configuration%20Extractors/VJW0rm" target="_blank" rel="noreferrer"><span>VJW0rm</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Configuration%20Extractors/Tycoon2FA" target="_blank" rel="noreferrer"><span>Tycoon2FA</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Configuration%20Extractors/PurelogStealer" target="_blank" rel="noreferrer"><span>PurelogStealer decryptor</span><span aria-hidden="true">↗</span></a></li>
-          </ul>
-        </article>
-
-        <article class="work-card" data-category="detection">
-          <header>
-            <div>
-              <span class="card-index">05 / YARA</span>
-              <h3>YARA rules</h3>
-            </div>
-            <span class="card-count">05 rules</span>
-          </header>
-          <p class="card-description">Detection logic distilled from hands-on analysis and repeatable sample traits.</p>
-          <ul class="project-list">
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/FormBookYara.yar" target="_blank" rel="noreferrer"><span>FormBook</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/Strela.yar" target="_blank" rel="noreferrer"><span>StrelaLoader</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/FormbookSteganography2025.yar" target="_blank" rel="noreferrer"><span>FormBook steganography</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/SVG_HTML.yar" target="_blank" rel="noreferrer"><span>SVG HTML smuggling</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/PurelogStealer.yar" target="_blank" rel="noreferrer"><span>PurelogStealer</span><span aria-hidden="true">↗</span></a></li>
-          </ul>
-        </article>
-
-        <article class="work-card" data-category="tools">
-          <header>
-            <div>
-              <span class="card-index">06 / TOOL</span>
-              <h3>Scripts &amp; tools</h3>
-            </div>
-            <span class="card-count">10 tools</span>
-          </header>
-          <p class="card-description">Utilities that remove friction from collection, triage, and investigation.</p>
-          <ul class="project-list">
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/CheckResponse" target="_blank" rel="noreferrer"><span>HTTP response checker</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/FindJS" target="_blank" rel="noreferrer"><span>Find JavaScript</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/HeaderAnalyzer" target="_blank" rel="noreferrer"><span>Email header analyzer</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/LummaHuntTest" target="_blank" rel="noreferrer"><span>Lumma hunting test</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/PullHTML" target="_blank" rel="noreferrer"><span>HTML puller</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/QR%20Scanner" target="_blank" rel="noreferrer"><span>QR scanner</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/Safelinks%20Decoder" target="_blank" rel="noreferrer"><span>Safe Links decoder</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/TG_Forwarder" target="_blank" rel="noreferrer"><span>Telegram forwarder</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/GetJS" target="_blank" rel="noreferrer"><span>GetJS</span><span aria-hidden="true">↗</span></a></li>
-            <li><a class="project-link" href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/URLHausGraph" target="_blank" rel="noreferrer"><span>URLhaus infrastructure graph</span><span aria-hidden="true">↗</span></a></li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="empty-state" id="empty-state" hidden>
-        <strong>No matching entries.</strong>
-        <span>Try a broader search or a different discipline.</span>
       </div>
     </section>
 
-    <section class="shell next-callout">
-      <div>
-        <p class="eyebrow">Still digging</p>
-        <h2>The journal keeps moving.</h2>
+    <section class="container portfolio-projects" aria-labelledby="selected-projects-title">
+      <header class="portfolio-section-header">
+        <h2 id="selected-projects-title">Selected projects</h2>
+        <a href="page2.html">All projects →</a>
+      </header>
+
+      <div class="portfolio-grid" data-random-grid>
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Malware analysis</span>
+          <h3>PurelogStealer</h3>
+          <p>Analysis notes with a payload decryptor and YARA rule.</p>
+          <div>
+            <a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/PurelogStealer.pdf" target="_blank" rel="noreferrer">Analysis ↗</a>
+            <a href="https://github.com/SherwynB/RepoForTools/tree/main/Configuration%20Extractors/PurelogStealer" target="_blank" rel="noreferrer">Extractor ↗</a>
+            <a href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/PurelogStealer.yar" target="_blank" rel="noreferrer">YARA ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Phishing analysis</span>
+          <h3>Tycoon2FA</h3>
+          <p>Phishing analysis notes and a configuration extractor.</p>
+          <div>
+            <a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/Decoding%20Tycoon2FA.pdf" target="_blank" rel="noreferrer">Analysis ↗</a>
+            <a href="https://github.com/SherwynB/RepoForTools/tree/main/Configuration%20Extractors/Tycoon2FA" target="_blank" rel="noreferrer">Extractor ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Security tooling</span>
+          <h3>CTIReporter</h3>
+          <p>CTI reporting tool.</p>
+          <div>
+            <a href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/CTIReporter" target="_blank" rel="noreferrer">Source ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Malware development</span>
+          <h3>MapView code injection</h3>
+          <p>Windows code-injection development exercise.</p>
+          <div>
+            <a href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/MapViewCodeInjection" target="_blank" rel="noreferrer">Source ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Detection</span>
+          <h3>FormBook YARA</h3>
+          <p>YARA rules for FormBook and a steganography-based variant.</p>
+          <div>
+            <a href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/FormBookYara.yar" target="_blank" rel="noreferrer">Rule ↗</a>
+            <a href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/FormbookSteganography2025.yar" target="_blank" rel="noreferrer">Variant ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Security tooling</span>
+          <h3>URLhaus infrastructure graph</h3>
+          <p>Tool for mapping infrastructure from URLhaus data.</p>
+          <div>
+            <a href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/URLHausGraph" target="_blank" rel="noreferrer">Source ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Malware analysis</span>
+          <h3>AsyncRAT</h3>
+          <p>Malware analysis notes.</p>
+          <div>
+            <a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/AsyncRAT.pdf" target="_blank" rel="noreferrer">Analysis ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Malware analysis</span>
+          <h3>DBATLoader</h3>
+          <p>Malware analysis notes.</p>
+          <div>
+            <a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/DBATLoader.pdf" target="_blank" rel="noreferrer">Analysis ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Phishing analysis</span>
+          <h3>FileFix</h3>
+          <p>Phishing analysis notes.</p>
+          <div>
+            <a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/PhishInternals/FileFix.pdf" target="_blank" rel="noreferrer">Analysis ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Security tooling</span>
+          <h3>Email header analyzer</h3>
+          <p>Tool for reviewing email headers.</p>
+          <div>
+            <a href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/HeaderAnalyzer" target="_blank" rel="noreferrer">Source ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Detection</span>
+          <h3>SVG HTML smuggling YARA</h3>
+          <p>YARA rule for SVG HTML smuggling.</p>
+          <div>
+            <a href="https://github.com/SherwynB/RepoForTools/blob/main/Yara/SVG_HTML.yar" target="_blank" rel="noreferrer">Rule ↗</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-random-project>
+          <span class="portfolio-category">Security tooling</span>
+          <h3>QR scanner</h3>
+          <p>QR-code scanning tool.</p>
+          <div>
+            <a href="https://github.com/SherwynB/RepoForTools/tree/main/Tools/QR%20Scanner" target="_blank" rel="noreferrer">Source ↗</a>
+          </div>
+        </article>
       </div>
-      <p>Newer analysis and development labs continue in the archive.</p>
-      <a class="button button-primary" href="page2.html">Continue to archive <span aria-hidden="true">→</span></a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-inner">
-      <p>Built as a record of the work—not a claim to know it all.</p>
-      <p>© <span data-current-year>2026</span> Sherwyn B. <span aria-hidden="true">/</span> <a href="https://github.com/SherwynB" target="_blank" rel="noreferrer">@SherwynB</a></p>
+    <div class="container footer-inner simple-footer">
+      <strong>Sherwyn B.</strong>
+      <p>© <span data-current-year>2026</span> · <a href="https://github.com/SherwynB" target="_blank" rel="noreferrer">GitHub ↗</a></p>
     </div>
   </footer>
 </body>

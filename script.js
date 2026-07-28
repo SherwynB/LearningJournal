@@ -1,52 +1,46 @@
-const currentYear = new Date().getFullYear();
-
-document.querySelectorAll("[data-current-year]").forEach((node) => {
-  node.textContent = currentYear;
+document.querySelectorAll("[data-current-year]").forEach((element) => {
+  element.textContent = new Date().getFullYear();
 });
 
 const searchInput = document.querySelector("#project-search");
-const filterButtons = [...document.querySelectorAll("[data-filter]")];
-const workCards = [...document.querySelectorAll(".work-card")];
+const workGroups = [...document.querySelectorAll(".work-group")];
 const visibleCount = document.querySelector("#visible-count");
-const emptyState = document.querySelector("#empty-state");
+const noResults = document.querySelector("#no-results");
 
-let activeFilter = "all";
-
-function filterProjects() {
+function updateWorkIndex() {
   if (!searchInput) return;
 
   const query = searchInput.value.trim().toLowerCase();
-  let matches = 0;
+  let total = 0;
 
-  workCards.forEach((card) => {
-    const categoryMatches = activeFilter === "all" || card.dataset.category === activeFilter;
-    let cardMatches = 0;
+  workGroups.forEach((group) => {
+    let groupTotal = 0;
 
-    card.querySelectorAll(".project-list li").forEach((item) => {
-      const textMatches = item.textContent.toLowerCase().includes(query);
-      const isVisible = categoryMatches && textMatches;
-      item.hidden = !isVisible;
-      if (isVisible) cardMatches += 1;
+    group.querySelectorAll(".index-item").forEach((item) => {
+      const matches = item.textContent.toLowerCase().includes(query);
+      item.hidden = !matches;
+      if (matches) groupTotal += 1;
     });
 
-    card.hidden = cardMatches === 0;
-    matches += cardMatches;
+    group.hidden = groupTotal === 0;
+    total += groupTotal;
   });
 
-  if (visibleCount) visibleCount.textContent = matches;
-  if (emptyState) emptyState.hidden = matches !== 0;
+  visibleCount.textContent = total;
+  noResults.hidden = total !== 0;
 }
 
-searchInput?.addEventListener("input", filterProjects);
+searchInput?.addEventListener("input", updateWorkIndex);
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
-    filterButtons.forEach((candidate) => {
-      const isActive = candidate === button;
-      candidate.classList.toggle("active", isActive);
-      candidate.setAttribute("aria-pressed", String(isActive));
-    });
-    filterProjects();
-  });
-});
+const randomProjectGrid = document.querySelector("[data-random-grid]");
+
+if (randomProjectGrid) {
+  const projects = [...randomProjectGrid.querySelectorAll("[data-random-project]")];
+
+  for (let index = projects.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [projects[index], projects[randomIndex]] = [projects[randomIndex], projects[index]];
+  }
+
+  projects.forEach((project) => randomProjectGrid.appendChild(project));
+}
