@@ -1,116 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Learning Journal</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recent malware research and development notes from Sherwyn B.'s learning journal.">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>Research Archive — Sherwyn B.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="header">
-    <h1>Learning Journal</h1>
-    <h2 class="subtitle">not yet an expert</h2>
-  </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Malware Analysis</th>
-        <th>Malware Development</th>
-        <th>Phishing Analysis</th>
-        <th>Config Extractors</th>
-        <th>YARA Rules</th>
-        <th>Scripts && Tools</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/PurelogStealer.pdf">PurelogStealer</a></td>
-                <td><a href=" https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/MapViewCodeInjection">Map View Code Injection</a></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/Gen.Trojan.pdf">Gen.Trojan</a></td>
-        <td><a href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/MacroLoader">MacroLoader</a></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Sherwyn B. learning journal home">
+        <span class="brand-mark" aria-hidden="true">SB</span>
+        <span>
+          <strong>Sherwyn B.</strong>
+          <small>Learning journal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Research</a>
+        <a class="active" href="page2.html" aria-current="page">Archive</a>
+        <a href="page3.html">Queue</a>
+      </nav>
+      <a class="header-link" href="https://github.com/SherwynB" target="_blank" rel="noreferrer">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
 
-  <div class="navigation">
-    <a href="index.html" class="button">Go to Page 1</a>
-    <a href="page2.html" class="button">Go to Page 2</a>
-    <a href="page3.html" class="button">Go to Page 3</a>
-  </div>
+  <main id="main-content">
+    <section class="shell subhero">
+      <p class="eyebrow">Archive / latest batch</p>
+      <div class="subhero-grid">
+        <h1>More time in the lab.<br><em>More notes in the open.</em></h1>
+        <p>
+          Recent additions to the journal, spanning hands-on malware analysis and controlled
+          development exercises. Each card opens the original work on GitHub.
+        </p>
+      </div>
+      <div class="page-marker" aria-hidden="true"><span>02</span><span>/ 03</span></div>
+    </section>
+
+    <section class="shell archive-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Four recent entries</p>
+          <h2>Latest field notes</h2>
+        </div>
+        <p>Focused studies, kept practical and published as I learn.</p>
+      </div>
+
+      <div class="feature-grid">
+        <a class="feature-card feature-card-wide" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/PurelogStealer.pdf" target="_blank" rel="noreferrer">
+          <div class="feature-top">
+            <span class="card-index">ANALYSIS / 01</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="feature-body">
+            <p class="feature-kicker">Malware analysis</p>
+            <h3>PurelogStealer</h3>
+            <p>A documented malware-reversing study available as a full PDF research note.</p>
+          </div>
+          <span class="feature-format">PDF research note</span>
+        </a>
+
+        <a class="feature-card" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/MapViewCodeInjection" target="_blank" rel="noreferrer">
+          <div class="feature-top">
+            <span class="card-index">DEVELOPMENT / 02</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="feature-body">
+            <p class="feature-kicker">Development lab</p>
+            <h3>MapView code injection</h3>
+            <p>A controlled implementation exercise exploring a Windows injection technique.</p>
+          </div>
+          <span class="feature-format">Source repository</span>
+        </a>
+
+        <a class="feature-card" href="https://github.com/SherwynB/LearningJournalFiles/blob/main/Folder%20of%20Files/MalRE/Gen.Trojan.pdf" target="_blank" rel="noreferrer">
+          <div class="feature-top">
+            <span class="card-index">ANALYSIS / 03</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="feature-body">
+            <p class="feature-kicker">Malware analysis</p>
+            <h3>Gen.Trojan</h3>
+            <p>Technical observations and reversing notes collected during sample analysis.</p>
+          </div>
+          <span class="feature-format">PDF research note</span>
+        </a>
+
+        <a class="feature-card feature-card-wide" href="https://github.com/SherwynB/LearningJournalFiles/tree/main/Folder%20of%20Files/MalDev/MacroLoader" target="_blank" rel="noreferrer">
+          <div class="feature-top">
+            <span class="card-index">DEVELOPMENT / 04</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="feature-body">
+            <p class="feature-kicker">Development lab</p>
+            <h3>MacroLoader</h3>
+            <p>A practical lab for studying macro-based execution flow and loader behavior.</p>
+          </div>
+          <span class="feature-format">Source repository</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="shell archive-note">
+      <div class="archive-number">49</div>
+      <div>
+        <p class="eyebrow">Looking for the full body of work?</p>
+        <h2>The main index holds every earlier entry.</h2>
+        <p>Browse malware families, phishing research, configuration extractors, YARA rules, and tools in one searchable view.</p>
+      </div>
+      <a class="button button-secondary" href="index.html#research">Return to full index <span aria-hidden="true">←</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Built as a record of the work—not a claim to know it all.</p>
+      <p>© <span data-current-year>2026</span> Sherwyn B. <span aria-hidden="true">/</span> <a href="https://github.com/SherwynB" target="_blank" rel="noreferrer">@SherwynB</a></p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,116 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Learning Journal</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The research queue and working method behind Sherwyn B.'s malware learning journal.">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>Research Queue — Sherwyn B.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="header">
-    <h1>Learning Journal</h1>
-    <h2 class="subtitle">not yet an expert</h2>
-  </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Malware Analysis</th>
-        <th>Malware Development</th>
-        <th>Phishing Analysis</th>
-        <th>Config Extractors</th>
-        <th>YARA Rules</th>
-        <th>Scripts && Tools</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Sherwyn B. learning journal home">
+        <span class="brand-mark" aria-hidden="true">SB</span>
+        <span>
+          <strong>Sherwyn B.</strong>
+          <small>Learning journal</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Research</a>
+        <a href="page2.html">Archive</a>
+        <a class="active" href="page3.html" aria-current="page">Queue</a>
+      </nav>
+      <a class="header-link" href="https://github.com/SherwynB" target="_blank" rel="noreferrer">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
 
-  <div class="navigation">
-    <a href="index.html" class="button">Go to Page 1</a>
-    <a href="page2.html" class="button">Go to Page 2</a>
-    <a href="page3.html" class="button">Go to Page 3</a>
-  </div>
+  <main id="main-content">
+    <section class="shell subhero queue-hero">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Research queue / open-ended</p>
+      <div class="subhero-grid">
+        <h1>The next useful question is already <em>in the queue.</em></h1>
+        <p>
+          This space is reserved for work still being tested, traced, or written up.
+          Nothing is published here until it can teach me something twice.
+        </p>
+      </div>
+      <div class="page-marker" aria-hidden="true"><span>03</span><span>/ 03</span></div>
+    </section>
+
+    <section class="shell queue-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Working lanes</p>
+          <h2>What the journal is built to explore</h2>
+        </div>
+        <p>Three recurring paths from raw sample to something others can use.</p>
+      </div>
+
+      <div class="queue-grid">
+        <article class="queue-card">
+          <div class="queue-card-top">
+            <span class="queue-number">01</span>
+            <span class="queue-status">Always open</span>
+          </div>
+          <h3>Trace the behavior</h3>
+          <p>Follow execution, record the pivots, and turn a messy sample into an understandable sequence.</p>
+          <span class="queue-tag">Malware reversing</span>
+        </article>
+        <article class="queue-card">
+          <div class="queue-card-top">
+            <span class="queue-number">02</span>
+            <span class="queue-status">Always open</span>
+          </div>
+          <h3>Build to understand</h3>
+          <p>Recreate small techniques in a controlled lab to understand the mechanics behind the alert.</p>
+          <span class="queue-tag">Development labs</span>
+        </article>
+        <article class="queue-card">
+          <div class="queue-card-top">
+            <span class="queue-number">03</span>
+            <span class="queue-status">Always open</span>
+          </div>
+          <h3>Make it detectable</h3>
+          <p>Translate observations into YARA logic, extractors, and focused utilities that support the next case.</p>
+          <span class="queue-tag">Detection engineering</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell method-section">
+      <div class="method-intro">
+        <p class="eyebrow">The operating loop</p>
+        <h2>Observe. Rebuild. Explain.</h2>
+        <p>A repeatable way to turn curiosity into notes worth keeping.</p>
+      </div>
+      <ol class="method-list">
+        <li>
+          <span>01</span>
+          <div><strong>Capture evidence</strong><p>Start with behavior, artifacts, and the details that can be verified.</p></div>
+        </li>
+        <li>
+          <span>02</span>
+          <div><strong>Test the mechanics</strong><p>Use focused experiments to separate assumptions from what the code actually does.</p></div>
+        </li>
+        <li>
+          <span>03</span>
+          <div><strong>Publish the useful part</strong><p>Document the path, keep the code accessible, and leave a trail for the next investigation.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="shell next-callout">
+      <div>
+        <p class="eyebrow">While the next note is cooking</p>
+        <h2>There are 53 entries ready now.</h2>
+      </div>
+      <p>Start with the complete research index or inspect the source directly on GitHub.</p>
+      <div class="callout-actions">
+        <a class="button button-primary" href="index.html#research">Browse the journal <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="https://github.com/SherwynB" target="_blank" rel="noreferrer">Visit GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Built as a record of the work—not a claim to know it all.</p>
+      <p>© <span data-current-year>2026</span> Sherwyn B. <span aria-hidden="true">/</span> <a href="https://github.com/SherwynB" target="_blank" rel="noreferrer">@SherwynB</a></p>
+    </div>
+  </footer>
 </body>
 </html>
